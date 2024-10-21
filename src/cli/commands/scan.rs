@@ -157,6 +157,8 @@ impl ScanArgs {
         tracing::warn!("output {}", cmake::path::cmake_lists_path(&options));
         cmake::lists::gen(&options, &source_mappings);
 
+        tracing::warn!("generate a build system with cmake");
+        cmake::project::gen(&options);
         return true;
     }
 

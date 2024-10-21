@@ -7,7 +7,7 @@ use clap::Args;
 #[derive(Args, Debug, Clone)]
 pub struct BuildArgs {
     pub name: Option<String>,
-    #[clap(long, default_value = "Debug")]
+    #[clap(long, default_value = "debug")]
     config: ConfigType,
 }
 
